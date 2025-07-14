@@ -26,7 +26,8 @@
 
 
 # Model Accuracy & Justification
-### The accuracy of the model prediction of the cryptocurrency price can be deduced by comparing the line chart showing the trend analysis of historical price movement (actual) of the selected coin vis a viz the trendline of the Prophet forecast. Ideally, Prophet should be able to closely predict the pattern of share price movement after fitting the model on historical price except there are anomalies such as external shocks that could result in either a decline or spike in the price of the coin (which should be further investigated). 
+### The accuracy of the model prediction of the cryptocurrency price can be deduced by comparing the line chart showing the trend analysis of historical price movement (actual) of the selected coin vis a viz the trendline of the Prophet forecast. 
+### Ideally, Prophet should be able to closely predict the pattern of share price movement after fitting the model on historical price except there are anomalies such as external shocks that could result in either a decline or spike in the price of the coin (which should be further investigated). 
 
 # Deployment Functionality & User Interface
 ### To ensure a friendly and robust user interface, streamlit was used to deploy the frontend of the model by integrating the app.py model with streamlit url on Github. 
