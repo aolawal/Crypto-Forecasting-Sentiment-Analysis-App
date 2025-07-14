@@ -1,4 +1,4 @@
-# Crypto-Forecasting-Sentiment App
+# Crypto Forecasting and Sentiment Analysis App
 
 # Crypto Trend Analysis and Prediction with Prophet
 
