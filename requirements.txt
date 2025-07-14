@@ -3,3 +3,7 @@ joblib
 xgboost
 numpy
 scikit-learn
+yfinance
+prophet
+pandas
+plotly
