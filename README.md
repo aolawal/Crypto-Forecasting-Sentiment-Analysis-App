@@ -50,7 +50,7 @@
 ## Crypto App Link : https://crypto-forecasting-sentiment-analysis-app-n92vzlgp9gvfpqdnpr8k.streamlit.app
 
 # Report & Code Quality
-### The code and the data is of high quality, the data is extracted from the website of a reputable and reliable organisation (Yahoo Finance), Cointelegraph
+### The code and the data is of high quality, the data is extracted from the website of a reputable and reliable organisation (Yahoo Finance), Cointelegraph, CoinDesk and CryptoSlate.
 
 ### Several tests had also been carried out on user interface interactivity before deciding on this final outcome. The codes are also flexible and universal; it gives users a wide array of options and flexibility in terms of being able to select a cryptocurrency of their choice and getting the required output as well as sentiment news analysis of their choice from 3 different choices. 
 ### In addition, users have the option to download both historical and forecasted share price.
