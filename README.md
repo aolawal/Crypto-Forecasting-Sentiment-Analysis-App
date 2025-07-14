@@ -3,7 +3,9 @@
 # Crypto Trend Analysis and Prediction with Prophet
 
 # Problem Definition
-### Investors are always in search of investment opportunities where they can grow their wealth. It is also essential that investors keep a well diversified portfolio in order to get the highest level of return for the lowest level of risk. This rationale behind the project is to ensure investors are exposed to wide array of investment alternatives which include cryptocurrencies, to enable investors make informed decision on appropriate portfolio mix and increase their return on investment.
+### Investors are always in search of investment opportunities where they can grow their wealth and it is essential tto have a well diversified portfolio in order to get the highest level of return for the lowest level of risk. 
+
+### The rationale behind the project is to ensure investors are exposed to wide array of investment alternatives which include cryptocurrencies, to enable investors make informed decision on appropriate portfolio mix and increase their return on investment.
 
 # The project aims to:
 ### 1. confirm the return on investment (ROI) on a cryptocurrency with a view to determine its profitability by considering the ROI of the stock over a defined period
