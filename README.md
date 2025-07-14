@@ -13,7 +13,7 @@
 ### 3. analyze daily market sentiment of investors.
 
 # Data Preprocessing & Exploratory Data Analysis (EDA)
-## Procedure:
+# Procedure:
 ### 1. The necessary libraries were imported
 ### 2. The timeframe of the data to be downloaded from Yahoo Finance was defined and the necessary Ticker symbol was inserted for loading
 ### 3. The datasets were pre-processed to prepare the data for analysis:
