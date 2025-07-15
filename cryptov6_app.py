@@ -13,12 +13,6 @@ import seaborn as sns
 # Streamlit page config
 st.set_page_config(page_title="Crypto Forecast & News Sentiment App", layout="wide")
 
-# Initialize session states
-if "run_forecast" not in st.session_state:
-    st.session_state["run_forecast"] = False
-if "refresh_news" not in st.session_state:
-    st.session_state["refresh_news"] = False
-
 # --- Prophet & Price Functions ---
 def download_crypto_data(ticker, start_date, end_date):
     data = yf.download(ticker, start=start_date, end=end_date)
@@ -50,6 +44,7 @@ def plot_price_trend(data, ticker):
     ax.grid(True)
     st.pyplot(fig)
 
+    # Download buttons
     csv = data.to_csv(index=False).encode('utf-8')
     st.download_button("📄 Download Price Trend CSV", csv, f"{ticker}_price_trend.csv", "text/csv")
 
@@ -144,25 +139,7 @@ start_date = st.sidebar.date_input("Start Date", dt.date(2020, 1, 1))
 end_date = st.sidebar.date_input("End Date", dt.date.today())
 forecast_days = st.sidebar.slider("Forecast Days", min_value=30, max_value=365, value=90, step=30)
 
-# Forecast trigger
 if st.sidebar.button("Run Forecast"):
-    st.session_state["run_forecast"] = True
-
-# News sentiment settings
-st.sidebar.header("News & Sentiment Settings")
-selected_feed = st.sidebar.selectbox("Select News Source", list(RSS_FEEDS.keys()))
-
-# News refresh trigger
-if st.sidebar.button("🔄 Refresh News"):
-    st.session_state["refresh_news"] = True
-
-# Optional reset
-if st.sidebar.button("🔄 Reset Page"):
-    st.session_state["run_forecast"] = False
-    st.session_state["refresh_news"] = False
-
-# Forecast display
-if st.session_state["run_forecast"]:
     data = download_crypto_data(crypto_ticker, start_date, end_date)
     if data is not None:
         st.subheader(f"Raw data for {crypto_ticker}")
@@ -189,8 +166,14 @@ if st.session_state["run_forecast"]:
         forecast_csv = forecast_display.to_csv(index=False).encode('utf-8')
         st.download_button("📄 Download Forecast CSV", forecast_csv, f"{crypto_ticker}_forecast.csv", "text/csv")
 
-# News sentiment display
-if st.session_state["refresh_news"]:
+# --- News Sentiment Section ---
+st.sidebar.header("News & Sentiment Settings")
+selected_feed = st.sidebar.selectbox("Select News Source", list(RSS_FEEDS.keys()))
+
+if st.sidebar.button("🔄 Refresh News"):
+    st.session_state["refresh_news"] = True
+
+if "refresh_news" not in st.session_state or st.session_state["refresh_news"]:
     news = fetch_and_analyze_news(RSS_FEEDS[selected_feed])
     st.session_state["refresh_news"] = False
 
