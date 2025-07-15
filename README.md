@@ -47,8 +47,7 @@
 ### 6.	The Prophet share price trend forecast (with option to zoom in and out over specific time frame)
 ### 7.	Option to download the share price forecast data for the selected time range
 
-## Crypto App Link : https://crypto-forecasting-sentiment-analysis-app-n92vzlgp9gvfpqdnpr8k.streamlit.app
-
+## Crypto App Link : https://crypto-forecasting-sentiment-analysis-app-knvuuoymmybd2e9uwhs9.streamlit.app
 # Report & Code Quality
 ### The code and the data is of high quality, the data is extracted from the website of a reputable and reliable organisation (Yahoo Finance), Cointelegraph, CoinDesk and CryptoSlate.
 
